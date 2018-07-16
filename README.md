@@ -163,3 +163,8 @@ This pipeline heavily relies on selection the correct region of interest in orde
 
 ## Improvements
 
+Many improvements can be made to better detect lane lines. Even though curve roads are a big part of driving. These techniques assume lane lines are straight.
+
+One big change that I could make is color selection. This eliminates many extraneous lines such as changes in lane material and other cars.
+
+Another change is making the region selection more dynamic. To deal with changes in road gradient, identification of the horizon can be factored into the selection of interesting parts of the image. 
