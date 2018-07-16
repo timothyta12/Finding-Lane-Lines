@@ -33,7 +33,7 @@ Removing color channels allows for the Canny edge dectector to more effectively 
     def grayscale(img):
         return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-!(/images/gray1)
+<img src="images/gray1.png" width="480" /> <img src="images/gray2.png" width="480" />
 
 ### Guassian Blur
 
@@ -46,9 +46,10 @@ Blurring the image smooths out the rough edges of the image which would be picke
 
 Highlights the edges of the image
 
-
     def canny(img, low_threshold, high_threshold):
         return cv2.Canny(img, low_threshold, high_threshold)
+        
+<img src="images/edges1.png" width="480" /> <img src="images/edges2.png" width="480" />
         
 ### Region of Interest
 
@@ -71,6 +72,8 @@ Cuts out portions of the image. In particular, for this project, it cuts out a t
         #returning the image only where mask pixels are nonzero
         masked_image = cv2.bitwise_and(img, mask)
         return masked_image
+
+<img src="images/edges_of_interest_1.png" width="480" /> <img src="images/edgesof_interest_2.png" width="480" />
 
 ### Hough Transform
 
@@ -132,6 +135,13 @@ Extracts out the lines of an image through various parameters and annotates the 
         bounding_box = np.array([x1, y1, x2, y2])
 
         return bounding_box.astype(int)
+        
+<img src="images/lines_1.png" width="480" /> <img src="images/lines_2.png" width="480" />
+
+### Extrapolation with Least Square Regression
+
+<img src="images/final_1.png" width="480" /> <img src="images/final_2.png" width="480" />
+
 
 ## Shortcomings
 
